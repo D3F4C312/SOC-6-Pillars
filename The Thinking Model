@@ -1,0 +1,19 @@
+Firstly, we should understand the process ( HOW ATTACKERS OPERATE ) , before handling tools, Every Attack follows this chain
+    Initial Access --> Execution --> Persistence --> Privilege escalation --> Credential access -->  
+    Lateral Movement --> Exfiltration --> Impact
+
+Phase-1:
+  You Must understand:
+      - What triggered the alert?
+      - Is it Malicious?
+      - How did it start?
+      - What executed?
+      - Did it spread?
+      - What to contain?
+  Skills Required:
+      - Process tree analysis
+      - Timeline Analysis
+      - Email/Phishing investigation
+      - Malware Execution understnading
+      - Auth log Analysis
+
