@@ -17,3 +17,75 @@ Phase-1:
       - Malware Execution understnading
       - Auth log Analysis
 
+Initial Access: How did attacker enter?
+    This is the entry point.
+        - Common Methods: Phishing email, Malicious download, Drive by download, drive by website, USB, Exploit, VPN Bruteforce.
+        - GOAL: Goal is to find the root cause
+
+Execution: What actually ran?
+    Attacker now eecute code.
+    Execution reveals attacker intent.
+
+Persistence: Did attacker stay?
+    Attackers don't want to loase access.
+    Common techniques: Scheduled task, Reg Run Key, Start folder, Service creation, WMI subscription.
+    Thought Process: Did system change? Will malware run after reboot?
+
+Privilege Escalation: Did attacker gain admin?
+    Attacker tries to become admin/SYSTEM.
+    Thought Process: Integrity level changed? Token elevated? Suspicious service created?
+
+Credential Access: Did attacker steal credentials?
+    Attacker tries to stea;: Passwords, Hashes, Tokens
+    SOC Thought Process: LSASS access? Dumping tools? Browser credential dump?
+
+Lateral Movement - Did attacker move?
+    Attacker moves to another machine.
+    Methods: RDP, SMB, PsExec, WMI, Remote powershell.
+    SOC Thought Process: Multiple hosts? New Logins? Remote command execution? ==> Now incident scope expands.
+
+Exfiltration - Was data stolen?
+    Attacker collects:
+    Documents, DB, Credentials.
+    SOC Thought Process
+    Large outbound traffic? Archive creation? Suspicious upload?
+
+Impact - What damage?
+    Final stage: Ransomeware, FIle deletion, Account creation, System shutdown.
+
+Investigation Questions:
+    1. What triggered the alert?        ==> Detection
+    2. Is it malicious?                  
+    3. How did it start?                ==> Initial Access
+    4. What executed?                   ==> Execution
+    5. Did it spread?                   ==> Lateral Movement
+    6. What to contain?                 ==> Response.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
